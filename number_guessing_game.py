@@ -1,13 +1,14 @@
 import random
 num=random.randint(1, 100)
-user=int(input("guess the number(1-100): "))
-attempts=1
+user=0
+attempts=0
+print("Welcome to the Number Guessing Game!")
+print("I'm thinking of a number between 1 and 100.")
 while user!=num:
+    user = int(input("Enter your guess: "))
+    attempts += 1
     if user>num:
         print("Too high!")
-        attempts+=1
     elif user<num:
         print("Too low!")
-        attempts+=1
-    user=int(input("guess again: "))
 print(f"Correct! You found the number in {attempts} attempts.")
